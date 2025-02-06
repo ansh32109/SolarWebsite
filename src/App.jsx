@@ -11,20 +11,20 @@ function App() {
   const [count, setCount] = useState(0)
   const navItems = [
     {
-      name: 'Alpha',
-      ref: '/Alpha'
+      name: 'About',
+      ref: '/about'
     },
     {
-      name: 'Beta',
-      ref: '/Beta'
+      name: 'Technology',
+      ref: '/tech'
     },
     {
-      name: 'Gamma',
-      ref: '/Gamma'
+      name: 'Solution',
+      ref: '/solution'
     },
     {
-      name: 'Delta',
-      ref: '/Delta'
+      name: 'Contact',
+      ref: '/contact'
     }
   ]
 
@@ -32,6 +32,14 @@ function App() {
     <>
       <Navbar navItems={navItems} />
       <Hero />
+      <div className='h-[400vh] grid grid-cols-2 text-white border'>
+        <div className='border'>1</div>
+        <div className='border'>2</div>
+        <div className='border'>3</div>
+        <div className='border'>4</div>
+        <div className="border">5</div>
+        <div className="border">6</div>
+      </div>
     </>
   )
 }
