@@ -1,14 +1,16 @@
 import React from 'react'
 import HeroLeft from './hero/HeroLeft'
 import HeroRight from './hero/HeroRight'
+import './Hero.css'
+import { motion } from 'motion/react'
 
 const Hero = () => {
   return (
-    <div>
-        <div className='mt-8 grid grid-cols-3 text-white h-[70vh]'>
-            <div className='flex justify-center items-center'>
+    <div className='container'>
+        <div className='mask mt-8 grid grid-cols-3 text-black h-[70vh]'>
+            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 , transition: {duration: 0.7} }} className='flex justify-center items-center'>
                 <HeroLeft />
-            </div>
+            </motion.div>
             <div className='flex text-center justify-center items-center col-span-2 px-52'>
                 <HeroRight />
             </div>

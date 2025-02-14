@@ -4,19 +4,17 @@ import placeHolderImg from '../assets/placeholder.jpg'
 
 const Navbar = ({ navItems }) => {
 
-
-
   return (
-    <div className='bg-black w-[75%] border border-neutral-600 mx-auto h-[8vh] rounded-[1rem] flex'>  
+    <div className='bg-white border-b-2 border-y-black fixed top-0 left-0 w-full h-[10vh] flex'>  
         <a href="/home" className='inline w-[10%] hover:scale-110 hover:duration-150'> 
-            <img src={placeHolderImg} height={10} width={10} className='border rounded-xl h-full w-full' /> 
+            <img src={placeHolderImg} height={10} width={10} className='border h-full w-full' /> 
         </a>
-        <nav className='h-full rounded-[1rem] w-[90%] mx-auto flex text-white overflow-hidden items-center justify-around'>
+        <nav className='h-full w-[90%] flex text-black  items-center justify-start'>
             <ul className='flex'>
                 {navItems.map((item, ind) => (
-                    <li className='mx-8'>
+                    <li key={ind} className='mx-8'>
                         <a href={item.ref}>
-                            <NavItems key={ind} name={item.name} />
+                            <NavItems key={ind} name={item.name} dropdown={item.dropdown} />
                         </a>
                     </li>   
                 ))}
