@@ -1,9 +1,9 @@
 import React from 'react'
-import placeHolderImg from '../../assets/placeholder.jpg'
+import placeHolderImg from '../../assets/panels3.jpeg'
 
 const HeroLeft = () => {
   return (
-    <div className='bg-gray-600 border rounded-xl overflow-hidden'>
+    <div className=' rounded-xl overflow-hidden'>
         <img src={placeHolderImg} />
     </div>
   )

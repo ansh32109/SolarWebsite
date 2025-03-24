@@ -1,0 +1,17 @@
+.smol-text{
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+input::placeholder{
+    font-size: 0.9rem;
+    margin: auto 3px;
+    /* padding: 5px; */
+}
+
+input{
+    text-indent: 5px;
+    /* font-size: 0.85rem; */
+    /* font-size: x-large; */
+    padding: 2px;
+}
