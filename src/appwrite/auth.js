@@ -36,12 +36,20 @@ export class AuthService{
 
     async getCurrentUser(){
         try {
-            const user = await auth.getCurrentUser()
-            if(user){
-                
-            }
+            return await this.account.get()            
         } catch (error) {
-            
+            console.log(error);
+            return null
+        }
+    }
+
+    async logout(){
+        try {
+            const res = await this.account.deleteSessions()
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            return null
         }
     }
 }

@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavItems from './navbar/NavItems'
-import placeHolderImg from '../assets/placeholder.jpg'
+// import placeHolderImg from '../assets/placeholder.jpg'
 import LoginBtn from './navbar/LoginBtn'
 import { Link } from 'react-router'
 import AuroraLogo from '../assets/AuroraLogo.svg'
+import { useSelector } from 'react-redux'
+import LogoutBtn from './navbar/LogoutBtn'
 
-const Navbar = ({ navItems }) => {
+const Navbar = ({ navItems, page }) => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    // const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    const authStatus = useSelector(state => state.authStatus)
 
   return (
     <div className='bg-white absolute top-0 left-0 w-full h-[10vh] flex'>  
@@ -26,7 +30,7 @@ const Navbar = ({ navItems }) => {
             </ul>
         </nav>
         {
-            isLoggedIn ? null : <LoginBtn className='flex items-center w-[10%] justify-center' />
+            authStatus ? <LogoutBtn /> : <LoginBtn className='flex items-center w-[10%] justify-center' />
         }
         
     </div>
