@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NavItems from './navbar/NavItems'
 // import placeHolderImg from '../assets/placeholder.jpg'
 import LoginBtn from './navbar/LoginBtn'
-import { Link } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import AuroraLogo from '../assets/AuroraLogo.svg'
 import { useSelector } from 'react-redux'
 import LogoutBtn from './navbar/LogoutBtn'
@@ -22,9 +22,9 @@ const Navbar = ({ navItems, page }) => {
             <ul className='flex'>
                 {navItems.map((item, ind) => (
                     <li key={ind} className='mx-8'>
-                        <a href={item.ref}>
+                        <NavLink to={item.ref}>
                             <NavItems key={ind} name={item.name} dropdown={item.dropdown} />
-                        </a>
+                        </NavLink>
                     </li>   
                 ))}
             </ul>

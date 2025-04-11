@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { useState } from 'react'
+import { Link } from 'react-router'
 
 const NavItems = ({ name, ref, dropdown }) => {
 
@@ -32,9 +33,9 @@ const NavItems = ({ name, ref, dropdown }) => {
       {dropdown ? (isOpen && 
         <motion.div initial={{scale: 0}} animate={{scale: 1}} exit={{ scale: 0, transition: {duration: 1} }} className={`border absolute top-8 left-${popLeft} object-center bg-black text-neutral-500 p-3 content-center flex flex-col gap-2 text-nowrap`}>
           {dropdown.map((item, ind) => (
-            <div className='hover:text-white hover:duration-200 hover:scale-105 hover:border-t-2 hover:border-b-2 hover:border-neutral-700' key={ind}>
+            <Link to={`/${name.toLowerCase()}/${item.toLowerCase()}`} className='hover:text-white hover:duration-200 hover:scale-105 hover:border-t-2 hover:border-b-2 hover:border-neutral-700' key={ind}>
               {item}
-            </div>
+            </Link>
           ))}
         
       </motion.div>)
