@@ -32,12 +32,12 @@ const Tech = () => {
             Click to find out more about: <br />
             <ol>
               <li className='my-2 leading-7'>
-                <Link to={'/tech/gridconnect'} className='hover:underline-offset-4 hover:underline hover:duration-200'>
+                <Link to={'/technology/gridconnect'} className='hover:underline-offset-4 hover:underline hover:duration-200'>
                   Grid Connect
                 </Link>
               </li>
               <li className='my-2 leading-7'>
-                <Link to={'/tech/gridbox'} className='hover:underline-offset-4 hover:underline hover:duration-200'>
+                <Link to={'/technology/gridbox'} className='hover:underline-offset-4 hover:underline hover:duration-200'>
                   Grid Box
                 </Link>
               </li>
